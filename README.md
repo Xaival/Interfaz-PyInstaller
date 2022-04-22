@@ -47,4 +47,3 @@ Archivo de python que se desea convertir en ejecutable.
 
 El programa utiliza el ejecutable original de PyInstaller por lo que es necesario acompañar al archivo de Python con un ejecutable.
 
-x
