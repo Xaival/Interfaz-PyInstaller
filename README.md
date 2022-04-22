@@ -4,7 +4,19 @@
 
 ## [Pagina PyInstaller](https://pypi.org/project/pyinstaller/)
 
-## Partes del programa
+## Partes
+
+### Carpetas
+
+**Proyecto Python**
+
+En esta carpeta se encuentra el archivo python que crea la interfaz y el ejecutable `pyinstaller.exe` para ejecutarlo.
+
+**Ejecutable**
+
+En esta carpeta se encuentra el resultado de convertir en ejecutable el archivo de Python de la carpeta de **Proyecto Python** y copiar manualmente el ejecutable `pyinstaller.exe`.
+
+### Partes del programa
 
 **Icono**
 
@@ -46,4 +58,6 @@ Archivo de python que se desea convertir en ejecutable.
 ## Funcionamiento
 
 El programa utiliza el ejecutable original de PyInstaller por lo que es necesario acompañar al archivo de Python con un ejecutable.
+
+Se podria decir que esta haciendo de interprete para el archivo.
 
