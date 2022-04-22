@@ -22,7 +22,7 @@ En esta carpeta se encuentra el archivo python que crea la interfaz y el ejecuta
 
 En esta carpeta se encuentra el resultado de convertir en ejecutable el archivo de Python de la carpeta de **Proyecto Python** y copiar manualmente el ejecutable `pyinstaller.exe`.
 
-## Partes del programa
+## Partes de la interfaz del programa
 
 **Icono**
 
