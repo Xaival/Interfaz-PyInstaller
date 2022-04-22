@@ -2,15 +2,19 @@
 
 ![image](https://user-images.githubusercontent.com/54257745/164465515-703d385c-2a22-4534-9d27-06cd0c8ef253.png)
 
+## [Pagina PyInstaller](https://pypi.org/project/pyinstaller/)
 
+## Partes del programa
 
-Icono
+**Icono**
 
 ![image](https://user-images.githubusercontent.com/54257745/164698163-fc6285ab-7f63-43f1-9020-f3a7ef17a48e.png)
 
+Archivo de python que se desea convertir en ejecutable.
+
 `-i` o `--icon=RUTA` Añade un icono personalizado al .exe RUTA es la ubicación de la imagen.ico.
 
-Generar
+**Generar**
 
 ![image](https://user-images.githubusercontent.com/54257745/164698361-14db4768-3af0-4f08-a536-683dcd6e5d6a.png)
 
@@ -22,7 +26,7 @@ Generar
 
 `-c`, `--console` o `--nowindowed` (predeterminado) Abre la terminal al ejecutar (solo válido para Windows).
 
-Permisos
+**Permisos**
 
 ![image](https://user-images.githubusercontent.com/54257745/164698656-743caca6-016b-4c0c-b26d-096f7801fced.png)
 
@@ -30,11 +34,16 @@ Permisos
 
 `--uac-uiaccess` Permite que el exe administrador funcione con escritorio remoto. Requiere permisos de administrador.
 
-Extras
+**Extras**
 
 ![image](https://user-images.githubusercontent.com/54257745/164698734-015d0997-c39d-48a9-b803-9411203ad385.png)
 
 `-K` o `--tk` Incluye la librería TCL / TK durante la implementación.
 
 `--clean` Limpie los archivos temporales y en cache antes de compilar.
+
+
+## Funcionamiento
+
+El programa utiliza el ejecutable original de PyInstaller por lo que es necesario acompañar al archivo de Python con un ejecutable.
 
