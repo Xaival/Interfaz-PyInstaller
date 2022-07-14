@@ -22,10 +22,6 @@ Se podría decir que está haciendo de intérprete para el archivo.
 
 En esta carpeta se encuentra el archivo python que crea la interfaz y el ejecutable `pyinstaller.exe` para ejecutarlo.
 
-### Ejecutable
-
-En esta carpeta se encuentra el resultado de convertir en ejecutable el archivo de Python de la carpeta de **Proyecto Python** y copiar manualmente el ejecutable `pyinstaller.exe`.
-
 ## Partes de la interfaz del programa
 
 ### Icono
