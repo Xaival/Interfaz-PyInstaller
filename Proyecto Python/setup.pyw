@@ -169,7 +169,7 @@ class Ventana(tk.Tk):
                                 try: 
                                 
                                     # Variables para guarda atributos para la ejecución del programa
-                                    CodigoEjecucion='"pyinstaller.exe"'
+                                    CodigoEjecucion='pyinstaller.exe'
                                     
                                     # Generar - Comprueba el valor asignado en el desplegable y dependiendo del cual sea se asigna
                                     if self.Combobox_C1_1.current() == 0:
