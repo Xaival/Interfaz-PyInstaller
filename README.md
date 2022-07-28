@@ -2,7 +2,7 @@
 # Aviso
 Para usarlo es necesario tener instalado pyinstaller. Puedes usar `pip install pyinstaller` para instalarlo.
 
-Para que se importen imagenes o cosas externas con el archivo es necesario que la ruta sea absoluta.
+Para que se importen imágenes o cosas externas con el archivo es necesario que la ruta sea absoluta.
 
 # Interfaz grafica para PyInstaller
 
