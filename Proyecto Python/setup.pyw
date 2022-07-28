@@ -132,7 +132,7 @@ class Ventana(tk.Tk):
     # Buscar icono
     def explorador2(self):
         # Abrir ventana de explorador de archivos y guardar ruta seleccionada
-        self.Entry_A1B1_2.set(filedialog.askopenfilename(title="Icono de la extensión", filetypes = [("JPEG Image", "*.jpg"), ("PNG Image", "*.png"),("Cualquiera","*.*")]))
+        self.Entry_A1B1_2.set(filedialog.askopenfilename(title="Icono de la extensión", filetypes = [("PNG Image", "*.png"), ("JPEG Image", "*.jpg"), ("Cualquiera","*.*")]))
 
 
 
