@@ -55,7 +55,7 @@ Archivo de python que se desea convertir en ejecutable.
 
 `--add-data` Permite añadir contenido dentro del ejecutable. Imágenes, base de datos o lo que sea.
 
-`--add-data "E:/.../Programa/datos; datos/"` para acceder a estos datos desde el archivo py hay que poner la ruta así `os.path.dirname(__file__)+"/datos/logo.ico"`. Para esto debe de crearse una carpeta llamada datos en la misma ruta que en la que está el archivo de python.
+`--add-data "E:/.../Programa/datos;datos/"` para acceder a estos datos desde el archivo py hay que poner la ruta así `os.path.dirname(__file__)+"\datos\logo.ico"`. Para esto debe de crearse una carpeta llamada datos en la misma ruta que en la que está el archivo de python.
 
 ### Permisos
 
