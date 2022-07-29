@@ -33,7 +33,7 @@ En esta carpeta se encuentra el archivo python que crea la interfaz y el ejecuta
 
 Archivo de python que se desea convertir en ejecutable.
 
-`-i` o `--icon=RUTA` Añade un icono personalizado al .exe RUTA es la ubicación de la imagen.ico.
+`-i` o `--icon=RUTA` Añade un icono personalizado al ".exe", `RUTA` es la ubicación de la logo.png.
 
 **Generar**
 
