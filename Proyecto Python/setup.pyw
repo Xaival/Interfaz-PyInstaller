@@ -34,24 +34,35 @@ class Ventana(tk.Tk):
     def create_widgets(self):
 
         # Variables
+        # Ruta del archivo
         self.Entry_A1B1_1 = tk.StringVar()
-
+    
+        # Ruta de icono
         self.Entry_A1B1_2 = tk.StringVar()
 
+        # Con terminal
         self.Checkbutton_C1_1 = tk.BooleanVar(self)
-        self.Checkbutton_C1_1.set(True)
+        self.Checkbutton_C1_1.set(False) # Valor inicial
+        
+        # Datos extras
+        self.Checkbutton_C1_2 = tk.BooleanVar(self)
+        self.Checkbutton_C1_2.set(False) # Valor inicial
 
+        # Administrador
         self.Checkbutton_A2_1 = tk.BooleanVar(self)
-        self.Checkbutton_A2_1.set(False)
+        self.Checkbutton_A2_1.set(False) # Valor inicial
 
+        # Escritorio remoto
         self.Checkbutton_A2_2 = tk.BooleanVar(self)
-        self.Checkbutton_A2_2.set(False)
-
+        self.Checkbutton_A2_2.set(False) # Valor inicial
+        
+        # Importar TCL / TK
         self.Checkbutton_B2_1 = tk.BooleanVar(self)
-        self.Checkbutton_B2_1.set(False)
+        self.Checkbutton_B2_1.set(False) # Valor inicial
 
+        # Limpiar caché
         self.Checkbutton_B2_2 = tk.BooleanVar(self)
-        self.Checkbutton_B2_2.set(False)
+        self.Checkbutton_B2_2.set(False) # Valor inicial
 
 
         # Hacer que la tabla de la raíz ocupe todo el espacio disponible
@@ -85,12 +96,15 @@ class Ventana(tk.Tk):
         # Generar
         tk.Label(Frame_C1, text="Generar").grid(row="0", column="0", sticky="nw", padx=5, pady=5)
 
-        self.Combobox_C1_1=ttk.Combobox(Frame_C1, state="readonly", values=["Carpeta", "Archivo.exe"])
+        self.Combobox_C1_1=ttk.Combobox(Frame_C1, state="readonly", values=["Archivo", "Carpeta"])
         self.Combobox_C1_1.grid(row="1", column="0", sticky="nsw", padx=5, pady=5)
         self.Combobox_C1_1.current(0) # Definir opción predeterminada
 
         # Terminal
         ttk.Checkbutton(Frame_C1, text="Con terminal", variable=self.Checkbutton_C1_1).grid(row="2", column="0", sticky="nsw", padx=5, pady=15)
+
+        # Datos extras
+        ttk.Checkbutton(Frame_C1, text="Datos extra", variable=self.Checkbutton_C1_2).grid(row="3", column="0", sticky="nsw", padx=5, pady=0)
 
 
         # A2 ________________________________________________________________________
@@ -173,17 +187,26 @@ class Ventana(tk.Tk):
                                     
                                     # Generar - Comprueba el valor asignado en el desplegable y dependiendo del cual sea se asigna
                                     if self.Combobox_C1_1.current() == 0:
-                                        CodigoEjecucion+=" -D" # -D (predeterminado) agrupa la salida en una carpeta.
-                                        GeneraCarpeta=True # Guarda variable para saber si el resultado será una carpeta
-                                    else:
                                         CodigoEjecucion+=" -F" # -F El resultante es un único archivo `.exe`.
                                         GeneraCarpeta=False # Guarda variable para saber si el resultado será un archivo
+                                    else:
+                                        CodigoEjecucion+=" -D" # -D (predeterminado) agrupa la salida en una carpeta.
+                                        GeneraCarpeta=True # Guarda variable para saber si el resultado será una carpeta
 
                                     # Con terminal - Comprueba si Checkbutton esté seleccionado
                                     # -c (predeterminado) Abre la terminal al ejecutar (únicamente válido para Windows).
                                     if self.Checkbutton_C1_1.get(): CodigoEjecucion+=" -c"
                                     # -w Al abrir el ejecutable no abrirá la terminal (únicamente válido para Windows).
                                     else: CodigoEjecucion+=" -w"
+
+                                    # Datos extras - Añade una carpeta
+                                    # Ubicacion de la carpeta con datos extras
+                                    DatosExtra=os.path.dirname(self.Entry_A1B1_1.get())+'/datos'
+                                    print(DatosExtra)
+                                    # Si esta activada la casilla y existe una carpeta llamada datos
+                                    if self.Checkbutton_C1_2.get() and exists(DatosExtra):
+                                        # -c (predeterminado) Abre la terminal al ejecutar (únicamente válido para Windows).
+                                        CodigoEjecucion+=' --add-data "'+DatosExtra+';datos/"'
 
                                     # Permisos - Comprueba si Checkbutton esté seleccionado
                                     # --uac-admin Pedir permisos de administrador al ejecutar el exe generado.
