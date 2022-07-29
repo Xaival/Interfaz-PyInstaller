@@ -43,9 +43,13 @@ Archivo de python que se desea convertir en ejecutable.
 
 `-F` o `--onefile` El resultante es un único archivo `.exe`.
 
+**Terminal**
+
 ![image](https://user-images.githubusercontent.com/54257745/181665254-df66ec38-9eef-455d-a1cc-3926837d48f0.png)
 
 `-c`, `--console` o `--nowindowed` (predeterminado) Abre la terminal al ejecutar (solo válido para Windows).
+
+**Datos extras**
 
 ![image](https://user-images.githubusercontent.com/54257745/181665336-00f92082-07ad-4e59-878f-9f08f0105609.png)
 
