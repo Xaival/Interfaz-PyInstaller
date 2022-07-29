@@ -6,7 +6,8 @@ Para añadir contenido extra (imagenes) es necesario usar `--add-data` el cual a
 
 # Interfaz grafica para PyInstaller
 
-![image](https://user-images.githubusercontent.com/54257745/164465515-703d385c-2a22-4534-9d27-06cd0c8ef253.png)
+![image](https://user-images.githubusercontent.com/54257745/181665000-6c8d2271-e4fb-4255-9be1-d27544c0b4be.png)
+
 
 ## [Página PyInstaller](https://pypi.org/project/pyinstaller/)
 
@@ -36,15 +37,21 @@ Archivo de python que se desea convertir en ejecutable.
 
 **Generar**
 
-![image](https://user-images.githubusercontent.com/54257745/164698361-14db4768-3af0-4f08-a536-683dcd6e5d6a.png)
+![image](https://user-images.githubusercontent.com/54257745/181665082-f09c7cae-ca4b-495d-b975-08613d8d0f5e.png)
 
 `-D` o `--onedir` (predeterminado) agrupa la salida en una única carpeta.
 
 `-F` o `--onefile` El resultante es un único archivo `.exe`.
 
-![image](https://user-images.githubusercontent.com/54257745/164698444-a0e78f59-8d88-4dfa-8c5f-6bba08f2418e.png)
+![image](https://user-images.githubusercontent.com/54257745/181665254-df66ec38-9eef-455d-a1cc-3926837d48f0.png)
 
 `-c`, `--console` o `--nowindowed` (predeterminado) Abre la terminal al ejecutar (solo válido para Windows).
+
+![image](https://user-images.githubusercontent.com/54257745/181665336-00f92082-07ad-4e59-878f-9f08f0105609.png)
+
+`--add-data` Permite añadir contenido dentro del ejecutable. Imágenes, base de datos o lo que sea.
+
+`--add-data "E:/.../Programa/datos; datos/"` para acceder a estos datos desde el archivo py hay que poner la ruta así `os.path.dirname(__file__)+"/datos/logo.ico"`
 
 ### Permisos
 
