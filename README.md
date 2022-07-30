@@ -4,20 +4,25 @@ Para usarlo es necesario tener instalado pyinstaller. Puedes usar `pip install p
 
 Para añadir contenido extra (imagenes) es necesario usar `--add-data` el cual aun no esta añadido.
 
+<br><br>
+
 # Interfaz grafica para PyInstaller
 
 ![image](https://user-images.githubusercontent.com/54257745/181665000-6c8d2271-e4fb-4255-9be1-d27544c0b4be.png)
 
+<br>
 
 ## [Página PyInstaller](https://pypi.org/project/pyinstaller/)
 
+<br><br>
 
 ## Funcionamiento
 
-El programa utiliza el ejecutable original de PyInstaller por lo que es necesario acompañar al archivo de Python con un ejecutable.
+El programa utiliza el ejecutable original de PyInstaller por lo que es necesario acompañar al archivo de Python con un ejecutable y que PyInstaller este instalado en el equipo.
 
-Se podría decir que está haciendo de intérprete para el archivo.
+Se podría decir que este programa hace de intérprete para el archivo.
 
+<br>
 
 ## Carpetas
 
@@ -25,9 +30,11 @@ Se podría decir que está haciendo de intérprete para el archivo.
 
 En esta carpeta se encuentra el archivo python que crea la interfaz y el ejecutable `pyinstaller.exe` para ejecutarlo.
 
+<br>
+
 ## Partes de la interfaz del programa
 
-### Icono
+### Archivo e Icono
 
 ![image](https://user-images.githubusercontent.com/54257745/164698163-fc6285ab-7f63-43f1-9020-f3a7ef17a48e.png)
 
@@ -35,7 +42,9 @@ Archivo de python que se desea convertir en ejecutable.
 
 `-i` o `--icon=RUTA` Añade un icono personalizado al ejecutable, `RUTA` es la ubicación de la logo.png.
 
-**Generar**
+<br>
+
+### Generar
 
 ![image](https://user-images.githubusercontent.com/54257745/181665082-f09c7cae-ca4b-495d-b975-08613d8d0f5e.png)
 
@@ -43,19 +52,25 @@ Archivo de python que se desea convertir en ejecutable.
 
 `-F` o `--onefile` El resultante es un único archivo `.exe`.
 
-**Terminal**
+<br>
+
+### Terminal
 
 ![image](https://user-images.githubusercontent.com/54257745/181665254-df66ec38-9eef-455d-a1cc-3926837d48f0.png)
 
 `-c`, `--console` o `--nowindowed` (predeterminado) Abre la terminal al ejecutar (solo válido para Windows).
 
-**Datos extras**
+<br>
+
+### Datos extras
 
 ![image](https://user-images.githubusercontent.com/54257745/181665336-00f92082-07ad-4e59-878f-9f08f0105609.png)
 
 `--add-data` Permite añadir contenido dentro del ejecutable. Imágenes, base de datos o lo que sea.
 
 `--add-data "E:/.../Programa/datos;datos/"` para acceder a estos datos desde el archivo py hay que poner la ruta así `os.path.dirname(__file__)+"\datos\logo.ico"`. Para esto debe de crearse una carpeta llamada datos en la misma ruta que en la que está el archivo de python.
+
+<br>
 
 ### Permisos
 
@@ -64,6 +79,8 @@ Archivo de python que se desea convertir en ejecutable.
 `--uac-admin` Pedir permisos de administrador al ejecutar el exe generado.
 
 `--uac-uiaccess` Permite que el exe administrador funcione con escritorio remoto. Requiere permisos de administrador.
+
+<br>
 
 ### Extras
 
