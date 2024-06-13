@@ -4,9 +4,7 @@ Para usarlo es necesario tener instalado pyinstaller. Puedes usar `pip install p
 
 Para añadir contenido extra (imagenes) es necesario usar `--add-data` el cual aun no esta añadido.
 
-Hay que añadir `C:\Users\usuario\AppData\Roaming\Python\Python312\Scripts\pyinstaller.exe` como variable de entorno `pyinstaller.exe`.
-![image](https://github.com/Xaival/Interfaz-PyInstaller/assets/54257745/d6408ca4-b756-40a5-8488-de5aefa4a386)
-
+Hay que añadir `C:\Users\usuario\AppData\Roaming\Python\Python312\Scripts\pyinstaller.exe` como variable de entorno `pyinstaller.exe` o enrutar el archivo de python para que funcione.
 
 
 <br><br>
